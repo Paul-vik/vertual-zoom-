@@ -2,7 +2,7 @@ import cv2
 from cvzone.HandTrackingModule import HandDetector
 
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 cap.set(3, 1288)
 cap.set(4, 720)
 
@@ -19,7 +19,7 @@ while True:
     img = cv2.flip(img, 1)
     hands = detector.findHands(img)
     img = detector.findHands(img)
-    img1 = cv2.imread("Capture.JPG")
+    img1 = cv2.imread("image_path.JPG")
 
 
 
@@ -57,4 +57,4 @@ while True:
 
 
     cv2.imshow("image", img)
-    cv2.waitKey(50)
+    cv2.waitKey(0)
